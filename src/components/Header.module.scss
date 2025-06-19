@@ -1,6 +1,6 @@
 @import './../styles/variables.scss';
 
-.header{
+.header {
     height: $header-height;
     position: fixed;
     z-index: 1000;
@@ -11,6 +11,7 @@
         max-width: 1920px;
         margin: 0 auto;
         padding: 0 $spacing-md;
+
         @include breakpoint(md) {
             padding: 0 $spacing-lg;
         }
@@ -25,14 +26,42 @@
 
             &:nth-child(2) {
                 display: flex;
-                justify-content: center;
+                justify-content: flex-end;
                 height: 100%;
+
+                margin-left: $spacing-md;  
             }
+
             &:last-of-type {
                 display: flex;
                 justify-content: flex-end;
+                flex: 0;
             }
         }
+    }
+
+    &__button__container {
+        display: none;
+        @include breakpoint(md) {
+            display: initial;
+        }
+    }
+    &__toggler {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        background: inherit;
+        all: unset;
+        @include breakpoint(md) {
+            display: none;
+        }
+
+        & > svg {
+            display: block;
+            font-size: 32px;
+        }
+        
     }
 }
 
@@ -45,11 +74,16 @@
 .nav {
     width: 100%;
     position: fixed;
-        top: $header-height;
-    //  right: -100%;
+    top: $header-height;
+     right: -100%;
     background: rgba($bg2, 0.8);
     text-align: center;
     padding: $spacing-md 0;
+
+    &--open {
+        transition: .2s ease right;
+        right: 0;
+    }
 
     &__items {
         display: block;
@@ -61,6 +95,7 @@
         height: 100%;
 
         transition: 0.3s ease color;
+
         &:hover {
             color: $primary;
         }
@@ -79,18 +114,31 @@
             padding: 0 $spacing-lg;
             display: flex;
             align-items: center;
-            justify-content: center ;
+            justify-content: center;
         }
+
+
     }
 
-    
+    &__button__container {
+        @include breakpoint(md) {
+            display:none;
+        }
+
+        padding: $spacing-md;
+    }
+
 }
 
 .button {
-        font-weight: 500;
-        background: inherit;
-        color: $text2;
-        border: 2px solid $text2;
-        padding: $spacing-md $spacing-lg;
-    }
+    font-weight: 500;
+    background: inherit;
+    color: $text2;
+    border: 2px solid $text2;
+    padding: $spacing-md $spacing-lg;
 
+    &:active {
+        transform: scale(0.98);
+        border: 0;
+    }
+}
