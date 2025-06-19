@@ -1,0 +1,27 @@
+@import 'variables';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $roboto-font;
+  color: $text;
+}
+
+.section__one {
+  border: 1px solid black;
+  background-image: url(./../../public/images/Jollof\ Rice.jpeg);
+  min-height: 500px;
+  background-size: cover;
+  color: $text2;
+}
+
+.hero {
+  margin-top: $header-height;
+}
+
+
+
