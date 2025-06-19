@@ -1,5 +1,7 @@
 import { useState } from "react"
 import styles from './Header.module.scss';
+import { AiOutlineCloseSquare } from "react-icons/ai";
+import { BiMenuAltRight } from "react-icons/bi";
 
 
 const Header = () => {
@@ -14,11 +16,18 @@ const Header = () => {
             <a className={styles.nav__items} href={"/"}>Home</a>
             <a className={styles.nav__items} href={"/"}>About</a>
             <a className={styles.nav__items} href={"/"}>Contact Us</a>
+            <div className={styles.nav__button__container}>
+              <Button/>
+            </div>
           </nav>
         </div>
         <div>
-          <div className={styles.header__button__container}></div>
-          <button className={styles.header__toggler}></button>
+          <div className={styles.header__button__container}>
+            <Button/>
+          </div>
+          <button className={styles.header__toggler}>
+            <BiMenuAltRight/>
+          </button>
         </div>
       </div>
 
@@ -26,6 +35,10 @@ const Header = () => {
     </header>
 
   )
+}
+
+const Button = () => {
+  return <button className={styles.button}>click me</button>
 }
 
 export default Header
