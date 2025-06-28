@@ -25,7 +25,7 @@ body {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  margin-top: 150px;
 
   @include breakpoint(md) {
             padding: 0 $spacing-lg;
@@ -46,7 +46,7 @@ body {
 }
 
 .CTA-1 {
-  margin-top: 1.3em;
+  margin-top: 4rem;
 
 }
  .CTA-1 > button {
@@ -64,9 +64,50 @@ body {
   color: $primary;
  }
 
-// .menu-button {
-  
-// }
+ .best-sellers-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;      
+ }
+
+.best-sellers {
+  margin: $spacing-md;
+  width: 300px;
+  height: 361px;
+  border-radius: 10px;
+  padding: $spacing-sm + 5px;
+  background-color: $primary;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__details > div {
+
+    display: flex;
+    justify-content: space-between;
+
+  }
+
+  &__details > div > button {
+    background-color: $btn;
+    color: $text2;
+    padding: 0.1em 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.2em;
+  }
+}
+
+.best-sellers > img {
+  width: 100%;
+  height: 250px;
+  border-radius: inherit;
+  object-fit: cover;
+}
 
 
 
