@@ -72,7 +72,7 @@ const SectionTwo= () => {
 
   return (
     <div>
-      <h1>Best Sellers</h1>
+      <h1 className='Best-sellers-header'>Best Sellers</h1>
       <div className='best-sellers-container'>
         {bestSellersmapped}
       </div>
