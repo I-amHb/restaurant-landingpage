@@ -14,14 +14,55 @@ body {
 .section__one {
   border: 1px solid black;
   background-image: url(/images/Jollof\ Rice.jpeg);
-  min-height: 500px;
+  height: 813px;
   background-size: cover;
   color: $text2;
 }
 
-.hero {
-  margin-top: $header-height;
+.hero-container {
+  padding: 0 $spacing-md;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include breakpoint(md) {
+            padding: 0 $spacing-lg;
+        }
 }
+
+.hero-container > h1 {
+  font-size: 3em;
+  font-weight: 700;
+  margin-bottom: 0.5em;
+  width: 320px;
+}
+
+.hero-container > p {
+  font-size: 1.2em;
+  font-weight: 400;
+  width: 320px;
+}
+
+.CTA-1 {
+  margin-top: 1.3em;
+
+}
+ .CTA-1 > button {
+  background-color: $btn;
+  color: $text2;
+  padding: 0.5em 1.5em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.2em;
+ }
+
+ .CTA-1 > a {
+  margin-left: 1.5em;
+  color: $primary;
+ }
 
 // .menu-button {
   

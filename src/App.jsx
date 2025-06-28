@@ -1,13 +1,13 @@
-import Footer from './components/footer'
 import SectionOne from './components/SectionOne'
+import SectionTwo from './components/SectionTwo'
 import './styles/main.scss'
 
 function App() {
 
   return (
     <>
-     <SectionOne/>
-     {/* <Footer/> */}
+      <SectionOne />
+      <SectionTwo />
     </>
   )
 }

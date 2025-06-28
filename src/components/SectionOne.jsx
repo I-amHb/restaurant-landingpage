@@ -1,17 +1,12 @@
 import React from 'react'
 import Header from './header'
+import Hero from './Hero'
 
 const SectionOne = () => {
     return (
         <div className='section__one'>
             < Header/>
-            {/* <div className="hero">
-                <p>Tribal Delicacies</p>
-                <h1>Best Nigerian Dishes</h1>
-                <div>
-
-                </div>
-            </div> */}
+            < Hero/>
         </div>
     )
 }
